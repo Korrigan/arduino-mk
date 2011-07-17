@@ -27,7 +27,7 @@
 NAME			=	test
 
 # Config for Arduino Duemilanove, hardware specific
-PORT = /dev/ttyUSB*
+PORT = /dev/ttyUSB0
 MCU = atmega328p
 F_CPU = 16000000
 UPLOAD_RATE = 57600
@@ -53,11 +53,11 @@ RM			= 	@rm -fv
 STTY			=	stty --file
 
 # Flags
-CXXFLAGS		+= 	-mmcu=$(MCU) -DF_CFU=$(F_CPU) \
+CXXFLAGS		+= 	-mmcu=$(MCU) -DF_CPU=$(F_CPU) \
 			  	-Os -W -Wall -ffunction-sections -fdata-sections \
 			  	-I$(ARDUINO)
 
-CFLAGS			+=	-mmcu=$(MCU) -DF_CFU=$(F_CPU) \
+CFLAGS			+=	-mmcu=$(MCU) -DF_CPU=$(F_CPU) \
 				-W -Wall -Wextra \
 				-std=c99 \
 				-I$(ARDUINO)

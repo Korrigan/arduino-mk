@@ -54,10 +54,10 @@ SIZE			= 	avr-size
 RM			= 	@rm -fv
 
 # Flags
-CXXFLAGS		+= 	-mmcu=$(MCU) -DF_CFU=$(F_CPU) \
+CXXFLAGS		+= 	-mmcu=$(MCU) -DF_CPU=$(F_CPU) \
 			  	-Os -W -Wall -ffunction-sections -fdata-sections
 
-CFLAGS			+=	-mmcu=$(MCU) -DF_CFU=$(F_CPU) \
+CFLAGS			+=	-mmcu=$(MCU) -DF_CPU=$(F_CPU) \
 				-W -Wall -Wextra \
 				-std=c99
 
